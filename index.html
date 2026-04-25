@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordanffz</title>
+
+  <!-- Partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 45px;
+      background: linear-gradient(90deg, #4da3ff, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: linear-gradient(90deg, #4da3ff, #2a6cff);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #4da3ff;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(20, 30, 60, 0.6);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(77,163,255,0.3);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 0 20px #4da3ff;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: #4da3ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Fundo partículas -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Jordanffz The King 👑</h1>
+    <p>Painéis, otimização, bypass e headtrick.</p>
+    <p><b>Seja INDETECTÁVEL</b></p>
+    <button class="btn">Explorar Produtos 🔥</button>
+  </header>
+
+  <section class="produtos">
+    <div class="card" onclick="comprar()">
+      <h3>Otimização PC</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <h3>Otimização Mobile</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <h3>Sensi PC</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <h3>Sensi Mobile</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <h3>Headtrick PC</h3>
+    </div>
+  </section>
+
+  <footer>
+    <p>Suporte 24h • Jordanffz</p>
+  </footer>
+
+  <script>
+    function comprar() {
+      alert("para adiquirir esse produto entre em contato diretamente conosco no nosso discord");
+    }
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#4da3ff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#4da3ff",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
