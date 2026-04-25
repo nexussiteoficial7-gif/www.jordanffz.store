@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordanffz</title>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #050816;
+  color: white;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  background: linear-gradient(90deg,#4da3ff,white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg,#4da3ff,#2a6cff);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #4da3ff;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.stat {
+  background: rgba(20,30,60,0.6);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(77,163,255,0.3);
+}
+
+.stat h2 {
+  color: #4da3ff;
+}
+
+/* PRODUTOS */
+.produtos {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(20,30,60,0.6);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #4da3ff;
+}
+
+.img-box {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TROLL FACE COM COR */
+.troll {
+  width: 100px;
+  filter: brightness(0) invert(1);
+}
+
+/* CORES IGUAL SITE */
+.blue { background: linear-gradient(45deg,#00c6ff,#0072ff);}
+.red { background: linear-gradient(45deg,#ff4b2b,#ff0000);}
+.pink { background: linear-gradient(45deg,#ff00cc,#ff66cc);}
+.green { background: linear-gradient(45deg,#00ff99,#00cc66);}
+.purple { background: linear-gradient(45deg,#a100ff,#6a00ff);}
+
+.card h3 {
+  padding: 10px;
+  margin: 0;
+}
+
+/* INFO */
+.info {
+  padding: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.info-box {
+  background: rgba(20,30,60,0.6);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(77,163,255,0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+  <h1>Jordanffz The King 👑</h1>
+  <p>Domine o jogo sem limites</p>
+  <button class="btn">Explorar Produtos 🔥</button>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <h2 id="clientes">0</h2>
+    <p>Clientes</p>
+  </div>
+
+  <div class="stat">
+    <h2 id="satisfeitos">0</h2>
+    <p>Satisfeitos</p>
+  </div>
+
+  <div class="stat">
+    <h2>4.7 ⭐</h2>
+    <p>Avaliação</p>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="produtos">
+  <h2>Nossos Produtos</h2>
+
+  <div class="grid">
+
+    <div class="card" onclick="comprar()">
+      <div class="img-box blue">
+        <img class="troll" src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png">
+      </div>
+      <h3>Painel XIT</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <div class="img-box red">
+        <img class="troll" src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png">
+      </div>
+      <h3>Painel de otimização</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <div class="img-box pink">
+        <img class="troll" src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png">
+      </div>
+      <h3>Bypass Anti SS</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <div class="img-box green">
+        <img class="troll" src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png">
+      </div>
+      <h3>Headtrick</h3>
+    </div>
+
+    <div class="card" onclick="comprar()">
+      <div class="img-box purple">
+        <img class="troll" src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png">
+      </div>
+      <h3>Sensi</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="info">
+  <div class="info-box">🎧 Suporte 24 horas</div>
+  <div class="info-box">✅ Compra garantida</div>
+  <div class="info-box">⚡ Entrega em até 15 minutos</div>
+  <div class="info-box">📦 Produto correto garantido</div>
+</section>
+
+<footer>
+  Jordanffz © 2026
+</footer>
+
+<script>
+// ALERTA
+function comprar() {
+  alert("para adiquirir esse produto entre em contato diretamente conosco no nosso discord");
+}
+
+// CONTADOR
+function animarNumero(id, final) {
+  let el = document.getElementById(id);
+  let count = 0;
+  let incremento = final / 100;
+
+  let i = setInterval(() => {
+    count += incremento;
+    if (count >= final) {
+      el.innerText = final.toLocaleString();
+      clearInterval(i);
+    } else {
+      el.innerText = Math.floor(count).toLocaleString();
+    }
+  }, 20);
+}
+
+animarNumero("clientes", 5627);
+animarNumero("satisfeitos", 5122);
+
+// RETÍCULAS MAIS VISÍVEIS
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    color: { value: "#4da3ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.2 },
+    size: { value: 1 },
+    line_linked: {
+      enable: true,
+      distance: 120,
+      color: "#4da3ff",
+      opacity: 0.5,
+      width: 1
+    },
+    move: { enable: true, speed: 1.5 }
+  }
+});
+</script>
+
+</body>
+</html>
